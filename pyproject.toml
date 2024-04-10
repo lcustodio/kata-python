@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "pairing-exercise"
+version = "0.1.0"
+description = ""
+authors = ["Luis Custodio <luis.custodio@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120  # defaults to 88 like black
+target-version = "py312"  # the python version to target, useful when considering code upgrades, defaults to "py310"
+
+select = [
+  "E",   # pycodestyle
+  "F",   # pyflakes
+  "UP",  # pyupgrade,
+  "I",   # isort
+]
